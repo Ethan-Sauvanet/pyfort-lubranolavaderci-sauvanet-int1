@@ -1,4 +1,5 @@
 import random
+import time
 
 def chance_challenges() :
     challenges = [shell_game, roll_dice_game]
@@ -31,7 +32,7 @@ def shell_game() :
         if guess in shells :
             if guess == good_shell :
                 print("You guessed the correct shell !\n")
-                print("You obtain a key !\n")
+                print("\033[93mYou obtain a key !\033[0m\n")
                 return True
             else :
                 print("You guessed the wrong shell.\n")
@@ -45,7 +46,7 @@ def shell_game() :
 
 def roll_dice_game() :
 
-    print("Welcome to Roll Dice Game !\n" +
+    print("mWelcome to Roll Dice Game !\n" +
     "In this game, the game master and you have 3 attempts to roll two dices.\n" +
     "The first one to do a 6 with one of his dices win the game !\n")
 
@@ -65,10 +66,11 @@ def roll_dice_game() :
         for item in rolls :
             if item == 6 :
                 print("You rolled 6 ! You win the game!\n" +
-                      "The key is yours, you can continue.")
+                      "\033[93mThe key is yours, you can continue.\033[0m")
                 return True
         print("You didn't roll a 6. Game master's turn !")
 
+        time.sleep(1)
         master_rolls = (random.randint(1, 6), random.randint(1, 6))
         print("\nMaster rolls : [", master_rolls[0], "] and [", master_rolls[1], "]")
 
@@ -78,6 +80,7 @@ def roll_dice_game() :
                 return False
         print("Neither player rolled a 6. The game continue !\n")
 
+    time.sleep(1)
     print("No player has scored a 6 after 3 tries. It's a draw !\n")
     return False
 

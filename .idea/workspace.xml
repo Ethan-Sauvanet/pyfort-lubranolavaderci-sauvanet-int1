@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46763c8c-b5a1-48f1-a17b-7b8a0f649626" name="Changes" comment="Shell game improved">
+    <list default="true" id="46763c8c-b5a1-48f1-a17b-7b8a0f649626" name="Changes" comment="Chance module finished">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Challenges/chance_challenges.py" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Challenges/chance_challenges.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,12 +21,12 @@
     &quot;assignee&quot;: &quot;Camille-Lubrano&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Ethan-Sauvanet/pyfort-lubranolavaderci-sauvanet-int1.git",
-    "accountId": "1033b199-8f70-43e1-8cd1-d00c1963931c"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Ethan-Sauvanet/pyfort-lubranolavaderci-sauvanet-int1.git&quot;,
+    &quot;accountId&quot;: &quot;1033b199-8f70-43e1-8cd1-d00c1963931c&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -42,6 +41,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.chance_challenges.executor": "Run",
+    "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "game",
@@ -97,7 +97,8 @@
       <workItem from="1733478500241" duration="6000" />
       <workItem from="1734017005011" duration="596000" />
       <workItem from="1734086484989" duration="594000" />
-      <workItem from="1734440046906" duration="6976000" />
+      <workItem from="1734440046906" duration="8006000" />
+      <workItem from="1734622690048" duration="1477000" />
     </task>
     <task id="LOCAL-00001" summary="fiunction test">
       <option name="closed" value="true" />
@@ -115,7 +116,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734443667038</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Chance module finished">
+      <option name="closed" value="true" />
+      <created>1734447644335</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1734447644335</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,7 +144,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fiunction test" />
     <MESSAGE value="Shell game improved" />
-    <option name="LAST_COMMIT_MESSAGE" value="Shell game improved" />
+    <MESSAGE value="Chance module finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chance module finished" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
