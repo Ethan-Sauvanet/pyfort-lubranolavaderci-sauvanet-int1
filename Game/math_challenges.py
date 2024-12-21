@@ -5,7 +5,7 @@ def factorial(n) :
     value = 1
     if n > 0 :
         for i in range(1, n+1) :
-            value = value*n
+            value = value*i
     else :
         value = 1
     return value
@@ -13,22 +13,27 @@ def factorial(n) :
 
 
 def math_challenge_factorial():
+
+    print("Welcome to the factorial challenge !")
+    print("In this game, you need to calculate the factorial of a random number between 1 and 10 to obtain a key !\n")
+
     n = random.randint(1, 10)
     print("Calculate the factorial of", n)
-    guess = int(input("Your answer:"))
+    guess = int(input("Your answer : "))
 
     correct_answer = factorial(n)
 
     if guess == correct_answer:
-        print("Correct, the factorial of", n, 'is', guess, 'Congratulations, you win a key')
+        print("Correct, the factorial of", n, 'is', guess, '.')
+        print('\033[93mCongratulations, you win a key !\033[0m')
         found = True
     else:
-        print('Your answer is not correct, the factorial of', n, 'is', correct_answer )
+        print('Your answer is not correct, the factorial of', n, 'is', correct_answer, '.')
         found = False
     return found
 
-if __name__ == "__main__":
-    math_challenge_factorial()
+#math_challenge_factorial() #Test the factorial function
+
 
 #Prime Numbers challenge (average)
 def is_prime(n):
@@ -40,22 +45,25 @@ def is_prime(n):
             found = False  # If a divisor is found, n is not prime
     return found
 
-
 def nearest_prime(n):
     while not is_prime(n):
         n += 1
     return n
 
 def math_challenge_prime():
+
+    print("Welcome to the prime number challenge !")
+    print("")
     n = random.randint(10, 20)
-    guess = int(input("Find the closest prime number to:", n))
+    guess = int(input('Find the closest prime number to {}: '.format(n)))
 
     correct_answer = nearest_prime(n)
 
     if guess == correct_answer:
-        print("Congratulations! You found the prime number,", guess)
+        print("Congratulations! You found the prime number,", guess,'.')
+        print('\033[93mCongratulations, you win a key !\033[0m')
     else:
-        print('Your answer is not correct, the closest prime number of', n, 'is', correct_answer )
+        print('Your answer is not correct, the closest prime number of', n, 'is', correct_answer, ".")
 
-if __name__ == "__main__":
-    math_challenge_prime()
+
+math_challenge_prime() #Test the prime function

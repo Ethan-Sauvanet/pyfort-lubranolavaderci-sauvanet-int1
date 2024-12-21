@@ -46,7 +46,7 @@ def shell_game() :
 
 def roll_dice_game() :
 
-    print("mWelcome to Roll Dice Game !\n" +
+    print("Welcome to Roll Dice Game !\n" +
     "In this game, the game master and you have 3 attempts to roll two dices.\n" +
     "The first one to do a 6 with one of his dices win the game !\n")
 
@@ -84,7 +84,7 @@ def roll_dice_game() :
     print("No player has scored a 6 after 3 tries. It's a draw !\n")
     return False
 
-chance_challenges()
+chance_challenges() #test the chance_challenge module
 
 
 
