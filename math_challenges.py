@@ -57,6 +57,5 @@ def math_challenge_prime():
     else:
         print('Your answer is not correct, the closest prime number of', n, 'is', correct_answer )
 
-# Example usage:
 if __name__ == "__main__":
     math_challenge_prime()
