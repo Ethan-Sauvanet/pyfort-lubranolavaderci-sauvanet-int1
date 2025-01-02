@@ -32,7 +32,6 @@ def math_challenge_factorial():
         found = False
     return found
 
-#math_challenge_factorial() #Test the factorial function
 
 
 #Prime Numbers challenge (average)
@@ -64,6 +63,3 @@ def math_challenge_prime():
         print('\033[93mCongratulations, you win a key !\033[0m')
     else:
         print('Your answer is not correct, the closest prime number of', n, 'is', correct_answer, ".")
-
-
-math_challenge_prime() #Test the prime function

@@ -84,7 +84,6 @@ def roll_dice_game() :
     print("No player has scored a 6 after 3 tries. It's a draw !\n")
     return False
 
-chance_challenges() #test the chance_challenge module
 
 
 
