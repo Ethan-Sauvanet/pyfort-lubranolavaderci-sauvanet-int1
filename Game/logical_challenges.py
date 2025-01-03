@@ -129,8 +129,3 @@ def battleship_game() :
         return False
 
 
-
-
-
-battleship_game()
-
