@@ -68,6 +68,7 @@ def math_challenge_prime():
 
 #Roulette challenge (average)
 def math_roulette_challenge():
+    #pas sure de numbers
     numbers = [random.randint(1, 20) for _ in range(5)]
 
     operation = ['addition', 'subtraction', 'multiplication']
@@ -104,3 +105,4 @@ def math_roulette_challenge():
 def math_challenge():
     challenges = [math_challenge_factorial, math_challenge_prime, math_roulette_challenge]
     challenge = random.choice(challenges)
+    return challenge()
