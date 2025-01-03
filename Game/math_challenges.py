@@ -1,6 +1,6 @@
-#Factorial challenge (weak)
 import random
 
+#Factorial challenge (weak)
 def factorial(n) :
     value = 1
     if n > 0 :
@@ -63,3 +63,44 @@ def math_challenge_prime():
         print('\033[93mCongratulations, you win a key !\033[0m')
     else:
         print('Your answer is not correct, the closest prime number of', n, 'is', correct_answer, ".")
+
+
+
+#Roulette challenge (average)
+def math_roulette_challenge():
+    numbers = [random.randint(1, 20) for _ in range(5)]
+
+    operation = ['addition', 'subtraction', 'multiplication']
+    random_operation = random.choice(operation)
+
+    result = 0
+
+    if random_operation == 'addition':
+        result = 0
+        for num in numbers :
+            result += num
+    elif random_operation == 'subtraction':
+        result = 0
+        for num in numbers :
+            result -= num
+    elif random_operation == 'multiplication':
+        result = 1
+        for num in numbers :
+            result *= num
+
+
+    print('The obtained numbers on the roulette are :',numbers)
+    print('Calculate the', random_operation, 'of these numbers')
+    guess = int(input('Your answer is :'))
+
+    if guess == result:
+        print('\033[93mCongratulations, you win a key !\033[0m')
+        return True
+    else:
+        print('Your answer is not correct, the result is', result)
+        return False
+
+
+def math_challenge():
+    challenges = [math_challenge_factorial, math_challenge_prime, math_roulette_challenge]
+    challenge = random.choice(challenges)
