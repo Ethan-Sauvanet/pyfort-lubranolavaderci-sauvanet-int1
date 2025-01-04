@@ -55,9 +55,11 @@ def challenges_menu():
     print('3. Chance challenge')
     print('4. Père Fouras riddle')
 
-    challenge=int(input('Enter the number to the corresponding challenge you would like to play : '))
+    #Prevent input errors
+    challenge = input('Enter the number to the corresponding challenge you would like to play : '))
     while challenge not in [1, 2, 3, 4]:
-        challenge = int(input('Please answer by 1, 2, 3 or 4. Which challenge you would like to play :'))
+        challenge = input('Please answer by 1, 2, 3 or 4. Which challenge you would like to play :'))
+
     if challenge == 1:
         print('You have selected the mathematics challenge')
     if challenge == 2:
