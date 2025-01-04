@@ -22,6 +22,17 @@ def game() :
     #The game itself is represented by a loop, the team plays until they gain 3 keys
     while number_keys < 3 :
 
+        challenge = challenges_menu()
+        if challenge == 1:
+            math_challenge()
+        if challenge == 2:
+            battleship_game()
+        if challenge == 3:
+            chance_challenges()
+        else:
+            pere_fouras_riddles()
+
+
 
 
 

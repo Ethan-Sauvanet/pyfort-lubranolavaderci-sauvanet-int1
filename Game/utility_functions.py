@@ -56,18 +56,18 @@ def challenges_menu():
     print('4. Père Fouras riddle')
 
     #Prevent input errors
-    challenge = input('Enter the number to the corresponding challenge you would like to play : '))
+    challenge = input('Enter the number to the corresponding challenge you would like to play : ')
     while challenge not in [1, 2, 3, 4]:
-        challenge = input('Please answer by 1, 2, 3 or 4. Which challenge you would like to play :'))
+        challenge = input('Please answer by 1, 2, 3 or 4. Which challenge you would like to play :')
 
     if challenge == 1:
-        print('You have selected the mathematics challenge')
+        print('You have selected the mathematics challenge\n')
     if challenge == 2:
-        print('You have selected the logic challenge')
+        print('You have selected the logic challenge\n')
     if challenge == 3:
-        print('You have selected the chance challenge')
+        print('You have selected the chance challenge\n')
     else:
-        print('You have selected the Père Fouras riddle')
+        print('You have selected the Père Fouras riddle\n')
 
     return challenge
 
@@ -85,9 +85,6 @@ def choose_player(team):
     number_selected = input('Please select the corresponding number to a player to take on the challenge : ')
     while len(number_selected) != 1 or ord('0') > ord(number_selected) or ord(number_selected) > ord('3'):
         number_selected = input('Please select the corresponding number to a player to take on the challenge : ')
-
-    if number_selected > 3 or number_selected <= 0:
-        number_selected = int(input('You must choose a valid number, who will do the challenge : '))
 
     player = team[number_selected - 1]
     print('You selected player', number_selected)
