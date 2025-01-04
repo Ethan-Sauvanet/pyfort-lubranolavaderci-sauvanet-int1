@@ -44,9 +44,19 @@ def treasure_room():
 
         guess = input("Enter your guess for the code word : ").strip()
 
-        if guess.lower() == code_word.lower():
+        #As we can't use .lower(), i created a loop that compares letter by letter even if some are in caps or not
+        if len(guess) == len(code_word):
             answer_correct = True
-            break
+            for i in range(len(guess)):
+                g = guess[i]
+                c = code_word[i]
+                if not (g == c or (ord('A') <= ord(g) <= ord('Z') and ord(g) + 32 == ord(c)) or
+                        (ord('a') <= ord(g) <= ord('z') and ord(g) - 32 == ord(c))):
+                    answer_correct = False
+                    break
+            if answer_correct:
+                break
+
         else:
             attempts -= 1
             if attempts > 0:
@@ -61,3 +71,4 @@ def treasure_room():
         print("\033[93mCongratulations ! You guessed the correct code word and accessed the treasure room !\033[0m")
     else:
         print("Better luck next time !")
+    return
