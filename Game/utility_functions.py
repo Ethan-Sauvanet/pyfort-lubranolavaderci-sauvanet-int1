@@ -81,7 +81,11 @@ def choose_player(team):
             role = 'Member'
         print(i+1, '. ', team[i]["name"], ' (', team[i]["profession"], ') - ', role)
 
-    number_selected = int(input('Please select the corresponding number to a player to take on the challenge : '))
+    #Prevent input errors
+    number_selected = input('Please select the corresponding number to a player to take on the challenge : ')
+    while len(number_selected) != 1 or ord('0') > ord(number_selected) or ord(number_selected) > ord('3'):
+        number_selected = input('Please select the corresponding number to a player to take on the challenge : ')
+
     if number_selected > 3 or number_selected <= 0:
         number_selected = int(input('You must choose a valid number, who will do the challenge : '))
 

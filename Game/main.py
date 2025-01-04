@@ -16,7 +16,14 @@ def game() :
 
     #Begining of the game
     introduction()
-    
+    compose_teams()
+
+    number_keys = 0
+    #The game itself is represented by a loop, the team plays until they gain 3 keys
+    while number_keys < 3 :
+
+
+
 
 
 
