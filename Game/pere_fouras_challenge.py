@@ -33,9 +33,3 @@ def pere_fouras_riddles():
                 print("You have failed to answer the riddle! You do not win a key.")
                 return False
 
-if __name__ == "__main__":
-    result = pere_fouras_riddles()
-    if result:
-        print("Game Result: You won!")
-    else:
-        print("Game Result: You lost!")
