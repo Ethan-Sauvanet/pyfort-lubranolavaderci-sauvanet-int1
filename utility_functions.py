@@ -22,22 +22,20 @@ def compose_teams():
             leader = True
         else:
             leader = False
+        player = {"name": name, "profession": profession, "leader": leader, "keys_wons": 0}
+        team.append(player)
 
-    player = {"name": name, "profession": profession, "leader": leader, "keys_wons": 0, }
-    team.append(player)
-
-#changer cette partie ne marche pas
+    # a corriger si cas ou il y a deux team leaders
     found = False
     for i in range(len(team)):
-        if team[i]["leader"] == True:
+        if team[i]["leader"]:
             found = True
 
-    if found == False:
-            team[0]["leader"] = True
-            print(team[0]["name"], " is now the leader.")
+    if not found:
+        team[0]["leader"] = True
+        print(team[0]["name"], " is now the leader.")
 
     return team
-
 
 
 
@@ -48,7 +46,34 @@ def challenges_menu():
     print('4. Père Fouras riddle')
 
     challenge=int(input('Enter the number to the corresponding challenge you would like to play : '))
-    while choice not in [1, 2, 3, 4]:
+    while challenge not in [1, 2, 3, 4]:
         challenge = int(input('Please answer by 1, 2, 3 or 4. Which challenge you would like to play :'))
+    if challenge == 1:
+        print('You have selected the mathematics challenge')
+    if challenge == 2:
+        print('You have selected the logic challenge')
+    if challenge == 3:
+        print('You have selected the chance challenge')
+    else:
+        print('You have selected the Père Fouras riddle')
 
     return challenge
+
+def choose_player(team):
+    print('Here is the list of players')
+
+    for i in range(len(team)):
+        if team[i]["leader"]:
+            role = 'Leader'
+        else :
+            role = 'Member'
+        print(i+1, '. ', team[i]["name"], ' (', team[i]["profession"], ') - ', role)
+
+    number_selected = int(input('Please select the corresponding number to a player to take on the challenge : '))
+    if number_selected > 3 or number_selected <= 0:
+        number_selected = int(input('You must choose a valid number, who will do the challenge : '))
+
+    player = team[number_selected - 1]
+    print('You selected player', number_selected)
+
+    return player
