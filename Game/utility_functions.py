@@ -5,10 +5,14 @@ def introduction():
 
 
 def compose_teams():
-    n = int(input('How many players will be playing : '))
-    while n > 3 or n <= 0:
-        print('You must choose a valid number of players, do not exceed 3')
-        n = int(input('How many players will be playing : '))
+    n = input('How many players will be playing: ')
+
+    #Prevent input errors
+    while not (len(n) > 0 and all(char in '0123456789' for char in n) and 0 < int(n) <= 3):
+        print("Please enter a number between 1 and 3.")
+        n = input('How many players will be playing: ')
+
+    n = int(n)
 
     team = []
 
@@ -16,29 +20,34 @@ def compose_teams():
         print("Enter details for Player", i + 1)
         name = input("Name: ")
         profession = input("Profession: ")
-        is_leader = input("Is this player the team leader? (yes/no): ")
-        while is_leader not in ['yes', 'no']:
-            is_leader = input("Please answer by yes or no, Is this player the team leader? (yes/no): ")
-        if is_leader == 'yes':
-            leader = True
+
+        is_leader = input("Is this player the team leader ? (yes/no): ")
+        while is_leader not in ['yes', 'no', 'Yes', 'No']:
+            is_leader = input("Please answer by yes or no, Is this player the team leader ? : ")
+
+        if is_leader == 'yes' or is_leader == 'Yes' :
+            leader = 'Leader'
         else:
-            leader = False
+            leader = 'Member'
+
         player = {"name": name, "profession": profession, "leader": leader, "keys_wons": 0}
         team.append(player)
 
-    # a corriger si cas ou il y a deux team leaders
+    #Prevent multiple team leaders
     found = False
     for i in range(len(team)):
-        if team[i]["leader"]:
+        if team[i]["leader"] == 'Leader':
             found = True
+            break
+    if i <= (len(team) - 1) :
+        team[i+1]["leader"] = 'Member'
+        team[len(team)-1]["leader"] = 'Member'
 
     if not found:
-        team[0]["leader"] = True
+        team[0]["leader"] = 'Leader'
         print(team[0]["name"], " is now the leader.")
 
     return team
-
-
 
 def challenges_menu():
     print('1. Mathematics challenge')
