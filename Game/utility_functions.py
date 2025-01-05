@@ -39,13 +39,15 @@ def compose_teams():
         if team[i]["leader"] == 'Leader':
             found = True
             break
-    if i <= (len(team) - 1) :
-        team[i+1]["leader"] = 'Member'
+    if i < (len(team) - 1) :
+        if len(team) > 1 :
+            team[i+1]["leader"] = 'Member'
         team[len(team)-1]["leader"] = 'Member'
 
     if not found:
         team[0]["leader"] = 'Leader'
-        print(team[0]["name"], " is now the leader.")
+        print("As there was no leader in your team,", team[0]["name"], "is now the leader.")
+        return team
 
     for player in team:
         if player["leader"] == 'Leader' :
@@ -68,18 +70,18 @@ def challenges_menu():
     challenge = int(challenge)
 
     if challenge == 1:
-        print('You have selected the mathematics challenge\n')
+        print('You have selected the mathematics challenge.\n')
     if challenge == 2:
-        print('You have selected the logic challenge\n')
+        print('You have selected the logic challenge.\n')
     if challenge == 3:
-        print('You have selected the chance challenge\n')
+        print('You have selected the chance challenge.\n')
     if challenge == 4:
-        print('You have selected the Père Fouras riddle\n')
+        print('You have selected the Père Fouras riddle.\n')
 
     return challenge
 
 def choose_player(team):
-    print('Here is the list of players')
+    print('Here is the list of players :')
 
     for i in range(len(team)):
         if team[i]["leader"]:
@@ -89,11 +91,12 @@ def choose_player(team):
         print(i+1, '. ', team[i]["name"], ' (', team[i]["profession"], ') - ', role)
 
     #Prevent input errors
-    number_selected = input('Please select the corresponding number to a player to take on the challenge : ')
-    while len(number_selected) != 1 or ord('0') > ord(number_selected) or ord(number_selected) > ord('3'):
-        number_selected = input('Please select the corresponding number to a player to take on the challenge : ')
+    number_selected = input('\nPlease select the corresponding number to a player to take on the challenge : ')
+    while len(number_selected) != 1 or ord('0') > ord(number_selected) or ord(number_selected) > ord('3') or len(team) < int(number_selected) :
+        number_selected = input('Invalid answer. Please select the corresponding number to a player to take on the challenge : ')
 
+    number_selected = int(number_selected)
     player = team[number_selected - 1]
-    print('You selected player', number_selected)
+    print('You selected player', number_selected, ".\n")
 
     return player

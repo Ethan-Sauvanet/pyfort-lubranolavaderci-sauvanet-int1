@@ -188,7 +188,7 @@ def battleship_game() :
         return True
 
     if has_won(master_shots_grid) :
-        print("The game master win!")
+        print("The game master wins !")
         return False
 
 

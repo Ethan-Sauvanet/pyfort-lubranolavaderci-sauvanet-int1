@@ -19,8 +19,13 @@ def math_challenge_factorial():
     #random.randint allows n to take a random value between the two selected values
     n = random.randint(1, 10)
     print("Calculate the factorial of", n)
-    guess = int(input("Your answer : "))
 
+    #Prevent input errors
+    guess = input("Your answer : ")
+    for i in range(len(guess)):
+        if not ord('0') <= ord(guess[i]) <= ord('9'):
+            guess = input("Your answer is in an invalid format. Try again : ")
+    guess = int(guess)
     correct_answer = factorial(n)
 
     #this block verifies if the guess answer is correct or not
@@ -37,7 +42,7 @@ def math_challenge_factorial():
 
 
 #Prime Numbers challenge
-#The function is prime calculates the closests prime number to the generated number (numer that will be generated in the math challenge prime function
+#The function is prime calculates the closest prime number to the generated number (numer that will be generated in the math challenge prime function
 def is_prime(n):
     found = True
     if n <= 1:
@@ -60,15 +65,22 @@ def math_challenge_prime():
     print("Welcome to the prime number challenge !")
     #Here a random number is generated between 10 and 20
     n = random.randint(10, 20)
-    guess = int(input('Find the closest prime number to {}: '.format(n)))
+    guess = input('Find the closest prime number (greater or equal) to {} : '.format(n))
 
+    #Prevent input errors
+    while len(guess) != 2 or ord(guess[0]) < ord('0') or ord(guess[0]) > ord('9') or ord(guess[1]) < ord('0') or ord(guess[1]) > ord('9'):
+        guess = input('Invalid format. Find the closest prime number (greater or equal) to {}: '.format(n))
+
+    guess = int(guess)
     correct_answer = nearest_prime(n)
     #Checks whether the guess is correct or not
     if guess == correct_answer:
         print("Congratulations! You found the prime number,", guess,'.')
         print('\033[93mCongratulations, you win a key !\033[0m')
+        return True
     else:
         print('Your answer is not correct, the closest prime number of', n, 'is', correct_answer, ".")
+        return False
 
 
 
@@ -102,7 +114,22 @@ def math_roulette_challenge():
 
     print('The obtained numbers on the roulette are :',numbers)
     print('Calculate the', random_operation, 'of these numbers')
-    guess = int(input('Your answer is :'))
+    guess = input('Your answer is : ')
+
+    #Prevent input errors
+    invalid_character = True
+    while invalid_character:
+
+        if random_operation == 'subtraction' and guess[0] == '-':
+            for i in range(1, len(guess)):
+                if not ord('0') <= ord(guess[i]) <= ord('9'):
+                    guess = input('Invalid format. Try again : ')
+
+        else :
+            for i in range(1,len(guess)):
+                if not ord('0') <= ord(guess[i]) <= ord('9'):
+                    guess = input('Invalid format. Try again : ')
+
 
     #The guess is then compared to the correct answer
     if guess == result:
