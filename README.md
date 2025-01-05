@@ -4,11 +4,11 @@
   - Contributors:
 
         - Camille Lubrano Lavaderci (role : completed the mathematics and the père Fouras challenge, the utility fonctions, and the README.file)
-        - Ethan Sauvanet (role : main file, chance, logical and final challenge)
+        - Ethan Sauvanet (role : completed the main file; chance, logical and final challenge)
   
-  - Description: The project consists of collecting keys by winning mini-games. One the player collects three keys, they unlock a final challenge to win the game.
+  - Description: The project is an insparation of the famous television game Fort Boyard. The game consists of collecting keys by winning mini-games. Once the player collects three keys, they unlock a final challenge to win.
   
-  - Key features :
+  - Key features : The challenges proposed to the players are various and requires to think, which offers a very diverse game and intellectual stimulation. We can also add that this game is played with multiple players which creates a team bonding
   
   - Technologies used:
 
@@ -28,7 +28,7 @@
 
 
 2. Technical documentation
-  - Game algorithm :
+  - Game algorithm : Firstly initialize the game, the choose the type of challenge and player, generate randmly a challenge and then track the player actions, repeat challenges, end the game
 
   - Functions :
 
