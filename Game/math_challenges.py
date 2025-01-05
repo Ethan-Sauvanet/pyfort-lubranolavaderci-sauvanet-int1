@@ -82,7 +82,7 @@ def math_roulette_challenge():
         numbers.append(n) #These numbers are then added to a list
 
     operation = ['addition', 'subtraction', 'multiplication']
-    random_operation = random.choice(operation #A random operator is then selected with the random.choice
+    random_operation = random.choice(operation) #A random operator is then selected with the random.choice
 
     result = 0
     #Then the correct answer is calculated by the algorthim
