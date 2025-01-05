@@ -29,12 +29,13 @@ def pere_fouras_riddles():
     correct_answer = riddle['answer']
     attempts = 3
 
-    print("You must answer the following riddle: ", question)
+    print("You must answer the following riddle: ")
+    print(question)
 
     #We have a while loop as the player has attempts until it goes to 0
     while attempts > 0:
         #puts both the guessed and correct answer in lower case to ensure no errors over whether the letters are upper or lower case
-        answer_player = input('Enter your answer: ').lower()
+        answer_player = input('Enter your answer (do not forget the "the" before ): ').lower()
         correct_answer = correct_answer.lower()
 
         if answer_player == correct_answer:
@@ -46,7 +47,7 @@ def pere_fouras_riddles():
             if attempts > 0:
                 print(f'Your answer is incorrect! You have {attempts} attempts left.')
             else:
-                print("You have failed to answer the riddle! You do not win a key.")
+                print("You have failed to answer the riddle! The correct answer was :", correct_answer, ". You do not win a key.")
                 #if the player cannot find the correct answer after the three tries, the team loses
                 return False
 

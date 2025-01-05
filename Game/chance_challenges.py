@@ -36,13 +36,16 @@ def shell_game() :
 
         print("You have", attempts, "attempts left")
 
-        print("The Master hides the key,")
+        print("The Master hides the key :")
         print(" ---    ---    ---")
         print("| A |  | B |  | C |")
         print(" ---    ---    ---")
         guess = input("Guess the shell that contains the key : ")
 
         #Prevent any input errors
+        while len(guess) != 1 or not (65 <= ord(guess) <= 90 or 97 <= ord(guess) <= 122):
+            guess = input("Invalid format. Guess the shell that contains the key (A, B or C): ")
+
         guess_int = ord(guess)
         if 97 <= guess_int <= 122:
             guess = chr(guess_int - 32)
