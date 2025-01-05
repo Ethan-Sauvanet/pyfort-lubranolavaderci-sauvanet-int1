@@ -17,7 +17,7 @@ def compose_teams():
     team = []
 
     for i in range(n):
-        print("Enter details for Player", i + 1)
+        print("\nEnter details for Player", i + 1)
         name = input("Name: ")
         profession = input("Profession: ")
 
@@ -47,9 +47,14 @@ def compose_teams():
         team[0]["leader"] = 'Leader'
         print(team[0]["name"], " is now the leader.")
 
+    for player in team:
+        if player["leader"] == 'Leader' :
+            print(player["name"], "is the leader of the team.")
     return team
 
 def challenges_menu():
+    print("\nThis is the list of the challenges. You have to choose a challenge by entering its corresponding number.")
+
     print('1. Mathematics challenge')
     print('2. Logic challenge')
     print('3. Chance challenge')
@@ -57,8 +62,10 @@ def challenges_menu():
 
     #Prevent input errors
     challenge = input('Enter the number to the corresponding challenge you would like to play : ')
-    while challenge not in [1, 2, 3, 4]:
+    while len(challenge) != 1 or ord('4') < ord(challenge) or ord('1') > ord(challenge) :
         challenge = input('Please answer by 1, 2, 3 or 4. Which challenge you would like to play :')
+
+    challenge = int(challenge)
 
     if challenge == 1:
         print('You have selected the mathematics challenge\n')
@@ -66,7 +73,7 @@ def challenges_menu():
         print('You have selected the logic challenge\n')
     if challenge == 3:
         print('You have selected the chance challenge\n')
-    else:
+    if challenge == 4:
         print('You have selected the Père Fouras riddle\n')
 
     return challenge

@@ -29,9 +29,21 @@ def game() :
             battleship_game()
         if challenge == 3:
             chance_challenges()
-        else:
+        if challenge == 4:
             pere_fouras_riddles()
 
+        if math_challenge() == True or battleship_game() == True or chance_challenges() == True or pere_fouras_riddles() == True :
+            number_keys += 1
+            print("You have", number_keys, "keys in totals.")
+        else :
+            print("You lost a challenge, pick another one. You need to have", 3-number_keys,"more key to access to the treasure room.")
+
+    if number_keys == 3 :
+        print("You have now enough keys to access the treasure room !")
+        treasure_room()
+    return
+
+game()
 
 
 

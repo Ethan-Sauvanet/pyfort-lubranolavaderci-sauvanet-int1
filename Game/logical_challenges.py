@@ -50,7 +50,7 @@ def ask_position():
 
         parts = user_input.split(",")
         #This condition prevent all possible input errors
-        if len(parts) == 2 and len(parts[0]) == 1 and len(parts[1]) == 1 and ord('0') < ord(parts[0]) <= ord(parts[1]) < ord('4') :
+        if len(parts) == 2 and len(parts[0]) == 1 and len(parts[1]) == 1 and ord('0') < ord(parts[0]) < ord('4') and ord('0') < ord(parts[1]) < ord('4') :
             row_str, column_str = parts[0].strip(), parts[1].strip()
 
             #Convert the values in Python (Python start with 0 when we start with 1)
@@ -108,7 +108,7 @@ def turn(player, player_shots_grid, opponent_grid) :
     #This loop ensure that any player does not shoot twice on the same spot
     while player_shots_grid[e][f] == '.' or player_shots_grid[e][f] == 'X':
         if player == 0 :
-            print("You have already shot at this position Enter another position :")
+            print("You have already shot at this position Enter another position.")
             attack = ask_position()
             e, f = attack[0], attack[1]
         else :
