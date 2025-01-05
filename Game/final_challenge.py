@@ -33,6 +33,7 @@ def treasure_room():
     clues = tv_game[tv_show][year][show]["Clues"]
     code_word = tv_game[tv_show][year][show]["CODE-WORD"]
 
+    print("You finally reached the treasure room ! Now you must decipher the code needed to open the door and access the treasure.")
     #Displaying the clues
     print("Here are your clues : ")
     for clue in clues[:3]:
@@ -68,7 +69,7 @@ def treasure_room():
                 print(f"Sorry, there is no attempts remaining, you failed. The correct code word was: {code_word}.")
 
     if answer_correct:
-        print("\033[93mCongratulations ! You guessed the correct code word and accessed the treasure room !\033[0m")
+        print("\033[93mCongratulations ! You guessed the correct code word and accessed the treasure room ! You won !\033[0m")
     else:
         print("Better luck next time !")
     return

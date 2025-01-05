@@ -42,7 +42,7 @@ def game() :
             print("\nYou lost a game.", 3-number_keys,"more key are needed to access the treasure room.")
 
     if number_keys == 3 :
-        print("You have now enough keys to access the treasure room !")
+        print("You have now enough keys to access the treasure room !\n")
         treasure_room()
     return
 

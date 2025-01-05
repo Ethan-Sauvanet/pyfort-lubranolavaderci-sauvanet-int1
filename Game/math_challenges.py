@@ -119,16 +119,21 @@ def math_roulette_challenge():
     #Prevent input errors
     invalid_character = True
     while invalid_character:
+        invalid_character = False  # Assume valid input initially
 
+        #Special case for the "-" before negative numbers
         if random_operation == 'subtraction' and guess[0] == '-':
             for i in range(1, len(guess)):
-                if not ord('0') <= ord(guess[i]) <= ord('9'):
-                    guess = input('Invalid format. Try again : ')
-
-        else :
-            for i in range(1,len(guess)):
-                if not ord('0') <= ord(guess[i]) <= ord('9'):
-                    guess = input('Invalid format. Try again : ')
+                if not (ord('0') <= ord(guess[i]) <= ord('9')):
+                    guess = input('Invalid format. Try again: ')
+                    invalid_character = True
+                    break
+        else:
+            for i in range(len(guess)):
+                if not (ord('0') <= ord(guess[i]) <= ord('9')):
+                    guess = input('Invalid format. Try again: ')
+                    invalid_character = True
+                    break
 
 
     #The guess is then compared to the correct answer
