@@ -1,21 +1,26 @@
+"""
+This is the utility functions file.
+In this file, there is all the functions used in main program to initialize every game
+"""
 
+#This function firstly displays a welcome message and then introduces the player the game and the rules
 def introduction():
     print('Welcome to the Fort Boyard game!')
     print('Your goal is to collect three keys by completing challenges to then unlock the treasure room.')
 
-
+#The function compose teams, creates teams in forms of lists
 def compose_teams():
     n = input('How many players will be playing: ')
 
-    #Prevent input errors
+    # This block ensures the number of players selected is valid, going from 1 to 3
     while not (len(n) > 0 and all(char in '0123456789' for char in n) and 0 < int(n) <= 3):
         print("Please enter a number between 1 and 3.")
         n = input('How many players will be playing: ')
 
     n = int(n)
-
     team = []
 
+    # This block saves informations about each players
     for i in range(n):
         print("\nEnter details for Player", i + 1)
         name = input("Name: ")
@@ -30,6 +35,7 @@ def compose_teams():
         else:
             leader = 'Member'
 
+        #Players are here represented as dictionaries containing information about them
         player = {"name": name, "profession": profession, "leader": leader, "keys_wons": 0}
         team.append(player)
 
@@ -54,6 +60,7 @@ def compose_teams():
             print(player["name"], "is the leader of the team.")
     return team
 
+#The challenges menu function displays all of the different challenges to choose from
 def challenges_menu():
     print("\nThis is the list of the challenges. You have to choose a challenge by entering its corresponding number.")
 
@@ -80,9 +87,11 @@ def challenges_menu():
 
     return challenge
 
+#The function choose player allows the players to select who will compete in the challenge
 def choose_player(team):
     print('Here is the list of players :')
 
+    # The block displays all the players and their informations
     for i in range(len(team)):
         if team[i]["leader"]:
             role = 'Leader'
