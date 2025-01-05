@@ -52,7 +52,7 @@
        - January 2 : Ethan works on the logical challenges
        - January 3 : Ethan finishs the logical chanllenges as well as some overall adjustments and Camille finishs the math challenges
        - January 4 : Camille finishs the README file, utility functions and the pere fouras challenge while Ethan finishs the final challenge as well as overall adjustments
-       - January  : Ethan finishs the main file, and both Camille and Ethan make some overall adjustments on their programs 
+       - January 5 : Ethan finishs the main file, and both Camille and Ethan make some overall adjustments on their programs 
  
  - Project chronology : We worked on the project trought the timeline and divided as much as possible. We made sure to start the functions not to late to be able to do the main program
 
