@@ -35,12 +35,14 @@ def game() :
         if challenge == 4:
             game_playing = pere_fouras_riddles()
 
+        #If a game is won, the number of key is increasing
         if game_playing :
             number_keys += 1
             print("\nYou have", number_keys, "keys in total.", 3-number_keys,"left !")
         else :
             print("\nYou lost a game.", 3-number_keys,"more key are needed to access the treasure room.")
 
+    #When the player have enough keys, he can access to the final challenge and the treasure room
     if number_keys == 3 :
         print("You have now enough keys to access the treasure room !\n")
         treasure_room()
