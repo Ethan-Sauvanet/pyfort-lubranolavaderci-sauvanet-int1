@@ -24,13 +24,13 @@
 
   - How to use :
    
-        -  To start the application, you can run the following command: npm start
+        -  Simply follow the instructions on screen, to execute the application : go to the file main.py and run.
 
 
 2. Technical documentation
   - Game algorithm : Firstly initialize the game, the choose the type of challenge and player, generate randmly a challenge and then track the player actions, repeat challenges, end the game
 
-  - Prototype Functions :
+  - Prototype Functions : The functions we implemented in the game
 
         - Introduction() : introduces the players to the game and the rules
         - compose_equipe() : allows the player to set their roles and register and for the programm to keep track of their won keys 
@@ -40,16 +40,25 @@
 - Input and error management :
   
         - Error messages such as 'Enter a new valid value' are used when unavailable values or commands are entered, to do this we make blocks that check if what is enterted is correct
-        - A few known bugs : File not found (when attempting to open a file that doesn't exist), Operator issues (certain operators can not fonction with certain values or variable types, for exemple dividing by zero), invalid syntax (issues in syntax)
+        - Infinite loop, Incompatible Operations Between Different Date Types, Syntax Error, Calling a non object, modifying immutable object, unhandled exceptions
 
 
 3. Logbook
-
+ - Logbbok :
+       - December 6 : we start the project firstly by dividing the challenges and tasks
+       - December 9 : Ethan finishs the Shell Challenge
+       - December 17 : Ethan upgrades the Shell Game and finishes the Chance module. Camille works on the two first Math challenges but does not push
+       - December 21 : Camille finishes the two first Math Challenges and Ethan does some overall adjustments
+       - January 2 : Ethan works on the logical challenges
+       - January 3 : Ethan finishs the logical chanllenges as well as some overall adjustments and Camille finishs the math challenges
+       - January 4 : Camille finishs the README file, utility functions and the pere fouras challenge while Ethan finishs the final challenge as well as overall adjustments
+       - January 5 : Ethan finishs the main file, and both Camille and Ethan make some overall adjustments on their programs 
+ 
  - Project chronology : We worked on the project trought the timeline and divided as much as possible. We made sure to start the functions not to late to be able to do the main program
 
  - Task distribution : On the first day we worked on the projetc we divided the tasks between the both of us, we agreed on Camille to do the mathematics and the père Fouras challenge, the utility fonctions, and the README.file and Ethan the main file, chance, logical and final challenge
 
 4. Testing and Validation
-- we tested all of the possible outcomes of our programs to ensure that they were correct and that there would be no errors
+- we tested all of the possible outcomes of our programs to ensure that they were correct and that there would be no errors. We tested functions of each challenge, the functions in the utility functions and finaly the main functions
 
   
