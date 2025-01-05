@@ -30,7 +30,7 @@
 2. Technical documentation
   - Game algorithm : Firstly initialize the game, the choose the type of challenge and player, generate randmly a challenge and then track the player actions, repeat challenges, end the game
 
-  - Functions :
+  - Prototype Functions :
 
         - Introduction() : introduces the players to the game and the rules
         - compose_equipe() : allows the player to set their roles and register and for the programm to keep track of their won keys 
@@ -45,11 +45,11 @@
 
 3. Logbook
 
- - Project chronology : We worked on the project trought the timeline, 
+ - Project chronology : We worked on the project trought the timeline and divided as much as possible. We made sure to start the functions not to late to be able to do the main program
 
  - Task distribution : On the first day we worked on the projetc we divided the tasks between the both of us, we agreed on Camille to do the mathematics and the père Fouras challenge, the utility fonctions, and the README.file and Ethan the main file, chance, logical and final challenge
 
 4. Testing and Validation
-- we tested all of the possible outcomes of our programs to ensure that they were correct 
+- we tested all of the possible outcomes of our programs to ensure that they were correct and that there would be no errors
 
   
