@@ -137,7 +137,7 @@ def math_roulette_challenge():
 
 
     #The guess is then compared to the correct answer
-    if guess == result:
+    if int(guess) == result:
         print('\033[93mCongratulations, you win a key !\033[0m')
         return True
     else:
