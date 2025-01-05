@@ -44,7 +44,16 @@
 
 
 3. Logbook
-
+ - Logbbok :
+       - December 6 : we start the project firstly by dividing the challenges and tasks
+       - December 9 : Ethan finishs the Shell Challenge
+       - December 17 : Ethan upgrades the Shell Game and finishes the Chance module. Camille works on the two first Math challenges but does not push
+       - December 21 : Camille finishes the two first Math Challenges and Ethan does some overall adjustments
+       - January 2 : Ethan works on the logical challenges
+       - January 3 : Ethan finishs the logical chanllenges as well as some overall adjustments and Camille finishs the math challenges
+       - January 4 : Camille finishs the README file, utility functions and the pere fouras challenge while Ethan finishs the final challenge as well as overall adjustments
+       - January  : Ethan finishs the main file, and both Camille and Ethan make some overall adjustments on their programs 
+ 
  - Project chronology : We worked on the project trought the timeline and divided as much as possible. We made sure to start the functions not to late to be able to do the main program
 
  - Task distribution : On the first day we worked on the projetc we divided the tasks between the both of us, we agreed on Camille to do the mathematics and the père Fouras challenge, the utility fonctions, and the README.file and Ethan the main file, chance, logical and final challenge
