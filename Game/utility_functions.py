@@ -93,7 +93,7 @@ def choose_player(team):
 
     # The block displays all the players and their informations
     for i in range(len(team)):
-        if team[i]["leader"]:
+        if team[i]["leader"] == "Leader" :
             role = 'Leader'
         else :
             role = 'Member'
